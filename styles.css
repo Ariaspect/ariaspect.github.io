@@ -68,6 +68,8 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
 .sidebar section + section { margin-top: 64px; }
 .sidebar h2 { font-size: 16px; margin-bottom: 22px; }
 .sidebar h3 { font-size: 13px; }
+.sidebar-entry + .sidebar-entry { margin-top: 28px; }
+.sidebar-note { margin-top: 6px; color: var(--muted); font-size: 12px; }
 .contact-list { display: grid; gap: 15px; list-style: none; padding: 0; margin: 0; }
 .contact-list li { display: flex; align-items: baseline; gap: 10px; }
 .contact-list svg { width: 15px; height: 15px; flex: 0 0 15px; align-self: center; }
@@ -145,6 +147,7 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .sidebar section + section { margin-top: 14mm; }
   .sidebar h2, h2 { font-size: 11pt; margin-bottom: 5mm; }
   .sidebar h3, .school { font-size: 8pt; }
+  .sidebar-note { font-size: 8pt; }
   .contact-list { gap: 3mm; }
   .contact-list li { gap: 2mm; }
   .contact-list svg { width: 3mm; height: 3mm; flex-basis: 3mm; }
