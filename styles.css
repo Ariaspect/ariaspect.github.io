@@ -49,8 +49,8 @@ button { font: inherit; }
 .cv {
   display: grid;
   grid-template-columns: 270px minmax(0, 1fr);
-  grid-template-areas: "sidebar identity" "sidebar profile" "sidebar experience";
-  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "sidebar identity" "sidebar profile" "sidebar experience" "sidebar publications";
+  grid-template-rows: auto auto auto 1fr;
   column-gap: 48px;
   row-gap: 48px;
   min-height: 680px;
@@ -79,13 +79,25 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
 
 .profile { grid-area: profile; }
 .profile p { max-width: 580px; color: #4b4b4b; line-height: 1.85; }
-.experience { grid-area: experience; padding-bottom: 38px; }
+.experience { grid-area: experience; }
 .experience > h2 { margin-bottom: 30px; }
 .entry + .entry { margin-top: 42px; }
 .entry-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
 .entry-meta > p:first-child { font-size: 13px; }
 .entry-meta .date { white-space: nowrap; }
 .entry h3 { margin-top: 7px; }
+.contributions { margin: 14px 0 0; padding-left: 19px; color: #4b4b4b; font-size: 13px; line-height: 1.8; }
+.contributions li + li { margin-top: 8px; }
+.publications { grid-area: publications; padding-bottom: 38px; }
+.publication { scroll-margin-top: 24px; }
+.publication h3 { font-size: 14px; line-height: 1.8; }
+.publication h3 a { text-decoration: none; }
+.publication h3 a:hover { text-decoration: underline; }
+.publication-authors, .publication-venue { margin-top: 12px; color: #4b4b4b; font-size: 12px; line-height: 1.85; }
+.publication-authors strong { color: #242424; }
+.publication-venue cite { font-style: normal; }
+.publication-links { margin-top: 16px; font-size: 12px; }
+.publication-links span { margin: 0 6px; color: var(--muted); }
 
 @media (max-width: 900px) and (min-width: 701px) {
   .page { padding: 0 36px; }
@@ -102,12 +114,12 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .page { padding: 0 24px; }
   .toolbar { padding: 24px 0 40px; }
   .print-button { padding: 8px 10px; font-size: 10px; gap: 7px; }
-  .cv { grid-template-columns: minmax(0, 1fr); grid-template-areas: "identity" "profile" "experience" "sidebar"; min-height: auto; row-gap: 38px; }
+  .cv { grid-template-columns: minmax(0, 1fr); grid-template-areas: "identity" "profile" "experience" "publications" "sidebar"; min-height: auto; row-gap: 38px; }
   h1 { font-size: 50px; letter-spacing: -2px; }
   .subtitle { font-size: 12px; margin-top: 16px; }
   h2, .sidebar h2 { font-size: 15px; margin-bottom: 18px; }
   .profile p { font-size: 13px; }
-  .experience { padding-bottom: 0; }
+  .publications { padding-bottom: 0; }
   .entry-meta { display: block; }
   .entry-meta .date { margin-top: 5px; }
   .entry + .entry { margin-top: 30px; }
@@ -128,7 +140,7 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   :root { font-size: 10pt; }
   .page { max-width: none; padding: 0; }
   .toolbar, .skip-link { display: none; }
-  .cv { grid-template-columns: 49mm minmax(0, 1fr); column-gap: 9mm; row-gap: 12mm; min-height: 205mm; }
+  .cv { grid-template-columns: 49mm minmax(0, 1fr); column-gap: 9mm; row-gap: 8mm; min-height: 205mm; }
   .sidebar { padding: 2mm 6mm 0 0; }
   .sidebar section + section { margin-top: 14mm; }
   .sidebar h2, h2 { font-size: 11pt; margin-bottom: 5mm; }
@@ -137,10 +149,10 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .contact-list li { gap: 2mm; }
   .contact-list svg { width: 3mm; height: 3mm; flex-basis: 3mm; }
   .contact-list a { font-size: 6.8pt; }
-  h1 { font-size: 40pt; letter-spacing: -2px; }
+  h1 { font-size: 34pt; letter-spacing: -2px; }
   .subtitle { margin-top: 4mm; font-size: 9pt; }
   .profile p { font-size: 9pt; }
-  .experience { padding-bottom: 0; }
+  .publications { padding-bottom: 0; }
   .experience > h2 { margin-bottom: 7mm; }
   .entry { break-inside: avoid; }
   .entry-meta { display: block; }
@@ -148,4 +160,10 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .date, .entry-meta .date { font-size: 8pt; }
   .entry h3 { font-size: 10pt; }
   .entry + .entry { margin-top: 10mm; }
+  .contributions { margin-top: 3mm; font-size: 8pt; line-height: 1.65; }
+  .contributions li + li { margin-top: 2mm; }
+  .publication { break-inside: avoid; }
+  .publication h3 { font-size: 9pt; line-height: 1.6; }
+  .publication-authors, .publication-venue { margin-top: 3mm; font-size: 8pt; line-height: 1.65; }
+  .publication-links { margin-top: 3mm; font-size: 8pt; }
 }

@@ -4,7 +4,9 @@ A responsive, two-column CV website for GitHub Pages. Plain HTML, CSS, and a sho
 
 ## Update the CV
 
-Edit `index.html` to change the biography, research experience, education, or links. Change `styles.css` to adjust the appearance. The **Print / PDF** button opens the browser print dialog; choose **Save as PDF** to export the CV.
+Edit `index.html` to change the biography, research experience, education, publications, or links. Publication citations use ACL Anthology metadata; downloadable BibTeX files are in `publications/`. Change `styles.css` to adjust the appearance. The **Print / PDF** button opens the browser print dialog; choose **Save as PDF** to export the CV.
+
+The favicon is a saved copy of the GitHub avatar for `Ariaspect`, stored at `assets/github-avatar.png`. Replace this file to update the favicon after changing the profile picture.
 
 ## Font
 
