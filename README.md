@@ -4,7 +4,7 @@ A responsive, two-column CV website for GitHub Pages. Plain HTML, CSS, and a sho
 
 ## Update the CV
 
-Edit `index.html` to change the biography, research experience, education, links, or last-updated date. Change `styles.css` to adjust the appearance. The **Print / PDF** button opens the browser print dialog; choose **Save as PDF** to export the CV.
+Edit `index.html` to change the biography, research experience, education, or links. Change `styles.css` to adjust the appearance. The **Print / PDF** button opens the browser print dialog; choose **Save as PDF** to export the CV.
 
 ## Font
 
