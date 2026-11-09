@@ -4,88 +4,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Minjoon Kee — School of Computing, KAIST. Education and research experience at KAIST's CyPhy Lab and MLP Lab.">
-    <meta name="theme-color" content="#f8f9f6">
+    <meta name="theme-color" content="#ffffff">
     <title>Minjoon Kee | CV</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/fonts/JetBrainsMonoNerdFontMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="page">
-      <header class="topbar">
-        <a class="monogram" href="#main" aria-label="Minjoon Kee, back to top">mk<span>.</span></a>
-        <nav aria-label="Profile links">
-          <a href="https://github.com/Ariaspect">GitHub <span aria-hidden="true">↗</span></a>
-          <button id="print-cv" class="print-button" type="button" hidden>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V8h16v9h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg>
-            Print / PDF
-          </button>
-        </nav>
-      </header>
+      <div class="toolbar">
+        <span class="document-label">Curriculum vitae</span>
+        <button id="print-cv" class="print-button" type="button" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V8h16v9h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg>
+          Print / PDF
+        </button>
+      </div>
 
-      <main id="main">
-        <section class="intro" aria-labelledby="name">
-          <p class="eyebrow">Curriculum vitae</p>
-          <h1 id="name">Minjoon Kee<span>.</span></h1>
-          <p class="affiliation">School of Computing <span aria-hidden="true">/</span> KAIST</p>
-          <p class="bio">I study at KAIST’s School of Computing. My research experience includes internships at the MLP Lab and CyPhy Lab.</p>
-          <p class="current"><span class="status-dot" aria-hidden="true"></span>Currently a research intern at KAIST CyPhy Lab</p>
-        </section>
+      <main id="main" class="cv">
+        <header class="identity">
+          <h1><span class="given-name">Minjoon</span> <span class="family-name">Kee</span></h1>
+          <p class="subtitle">School of Computing, KAIST</p>
+        </header>
 
-        <section class="cv-section" aria-labelledby="research-heading">
-          <div class="section-label">
-            <span class="section-number" aria-hidden="true">01</span>
-            <h2 id="research-heading">Research experience</h2>
-          </div>
-          <div class="entries">
-            <article class="entry">
-              <div class="entry-heading">
-                <h3>KAIST CyPhy Lab</h3>
-                <p class="date"><time datetime="2026-08">Aug 2026</time> — Present</p>
-              </div>
-              <p class="entry-detail">Research intern <span class="tag">URP</span></p>
-            </article>
-            <article class="entry">
-              <div class="entry-heading">
-                <h3>KAIST MLP Lab</h3>
-                <p class="date"><time datetime="2026-01">Jan 2026</time> — <time datetime="2026-02">Feb 2026</time></p>
-              </div>
-              <p class="entry-detail">Research intern</p>
-            </article>
-          </div>
-        </section>
+        <aside class="sidebar" aria-label="Contact and education">
+          <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M7 18v-1a5 5 0 0 1 10 0v1"/></svg>
+                <a href="https://github.com/Ariaspect">github.com/Ariaspect</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+                <a href="https://ariaspect.github.io/">ariaspect.github.io</a>
+              </li>
+            </ul>
+          </section>
 
-        <section class="cv-section" aria-labelledby="education-heading">
-          <div class="section-label">
-            <span class="section-number" aria-hidden="true">02</span>
+          <section aria-labelledby="education-heading">
             <h2 id="education-heading">Education</h2>
-          </div>
-          <div class="entries">
-            <article class="entry">
-              <div class="entry-heading">
-                <h3>KAIST</h3>
-                <p class="date"><time datetime="2021">2021</time> — Present</p>
-              </div>
-              <p class="entry-detail">School of Computing</p>
-            </article>
-          </div>
+            <h3>School of Computing</h3>
+            <p class="school">KAIST</p>
+            <p class="date"><time datetime="2021">2021</time> — Present</p>
+          </section>
+        </aside>
+
+        <section class="profile" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profile</h2>
+          <p>I study at KAIST’s School of Computing. My research experience includes internships at the MLP Lab and CyPhy Lab.</p>
         </section>
 
-        <section class="cv-section links-section" aria-labelledby="links-heading">
-          <div class="section-label">
-            <span class="section-number" aria-hidden="true">03</span>
-            <h2 id="links-heading">Elsewhere</h2>
-          </div>
-          <div class="entries">
-            <a class="profile-link" href="https://github.com/Ariaspect"><span>GitHub <span class="handle">@Ariaspect</span></span><span aria-hidden="true">↗</span></a>
-          </div>
+        <section class="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Research experience</h2>
+          <article class="entry">
+            <div class="entry-meta">
+              <p>Research intern · URP</p>
+              <p class="date"><time datetime="2026-08">Aug 2026</time> — Present</p>
+            </div>
+            <h3>KAIST CyPhy Lab</h3>
+          </article>
+          <article class="entry">
+            <div class="entry-meta">
+              <p>Research intern</p>
+              <p class="date"><time datetime="2026-01">Jan 2026</time> — <time datetime="2026-02">Feb 2026</time></p>
+            </div>
+            <h3>KAIST MLP Lab</h3>
+          </article>
         </section>
       </main>
 
       <footer>
         <span>Minjoon Kee</span>
-        <span>Curriculum vitae <span aria-hidden="true">·</span> <time datetime="2026-11">November 2026</time></span>
+        <span>Updated <time datetime="2026-11">November 2026</time></span>
       </footer>
     </div>
   </body>

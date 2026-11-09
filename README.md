@@ -1,10 +1,14 @@
 # Minjoon Kee — CV
 
-A small, responsive CV website for GitHub Pages. Plain HTML, CSS, and a short script for printing; no dependencies or build step.
+A responsive, two-column CV website for GitHub Pages. Plain HTML, CSS, and a short script for printing; no dependencies or build step. Contact details and education sit in a sidebar, with the profile and research experience in the main column. The layout stacks on small screens and keeps two columns when printed.
 
 ## Update the CV
 
 Edit `index.html` to change the biography, research experience, education, links, or last-updated date. Change `styles.css` to adjust the appearance. The **Print / PDF** button opens the browser print dialog; choose **Save as PDF** to export the CV.
+
+## Font
+
+The site serves JetBrains Mono Nerd Font Mono in regular and bold weights from `assets/fonts/`, so visitors do not need the font installed. The WOFF2 files retain the font’s Nerd Font glyphs. Source: [Nerd Fonts / JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Ligatures). The SIL Open Font License is included in `assets/fonts/OFL.txt`.
 
 ## Publish on GitHub Pages
 
