@@ -8,6 +8,8 @@ Edit `index.html` to change the biography, research experience, education, publi
 
 The favicon is a saved copy of the GitHub avatar for `Ariaspect`, stored at `assets/github-avatar.png`. Replace this file to update the favicon after changing the profile picture.
 
+The sidebar portrait is the supplied photo, stored unchanged at `assets/portrait.jpg`. Its display size is controlled by the `.portrait` rules in `styles.css`.
+
 ## Font
 
 The site serves JetBrains Mono Nerd Font Mono in regular and bold weights from `assets/fonts/`, so visitors do not need the font installed. The WOFF2 files retain the font’s Nerd Font glyphs. Source: [Nerd Fonts / JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Ligatures). The SIL Open Font License is included in `assets/fonts/OFL.txt`.

@@ -47,14 +47,19 @@ button { font: inherit; }
 .print-button svg { width: 16px; height: 16px; }
 
 .cv {
+  --sidebar-width: 270px;
+  position: relative;
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
-  grid-template-areas: "sidebar identity" "sidebar profile" "sidebar experience" "sidebar publications";
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  grid-template-areas: "portrait identity" "sidebar profile" "sidebar experience" "sidebar publications";
   grid-template-rows: auto auto auto 1fr;
   column-gap: 48px;
   row-gap: 48px;
   min-height: 680px;
 }
+.cv::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--sidebar-width) - 1px); border-left: 1px solid var(--line); pointer-events: none; }
+.portrait-frame { grid-area: portrait; padding-right: 32px; }
+.portrait { display: block; width: 100%; max-width: 210px; height: auto; border-radius: 2px; }
 
 .identity { grid-area: identity; }
 h1 { font-size: clamp(44px, 6vw, 68px); line-height: 1.12; letter-spacing: -3px; font-weight: 400; }
@@ -64,7 +69,7 @@ h1 { font-size: clamp(44px, 6vw, 68px); line-height: 1.12; letter-spacing: -3px;
 h2 { margin-bottom: 24px; font-size: 17px; line-height: 1.5; letter-spacing: .1px; text-transform: uppercase; font-weight: 700; }
 h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
 
-.sidebar { grid-area: sidebar; border-right: 1px solid var(--line); padding: 8px 32px 48px 0; }
+.sidebar { grid-area: sidebar; padding: 8px 32px 48px 0; }
 .sidebar section + section { margin-top: 64px; }
 .sidebar h2 { font-size: 16px; margin-bottom: 22px; }
 .sidebar h3 { font-size: 13px; }
@@ -81,6 +86,7 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
 
 .profile { grid-area: profile; }
 .profile p { max-width: 580px; color: #4b4b4b; line-height: 1.85; }
+.profile p + p { margin-top: 16px; }
 .experience { grid-area: experience; }
 .experience > h2 { margin-bottom: 30px; }
 .entry + .entry { margin-top: 42px; }
@@ -103,7 +109,8 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
 
 @media (max-width: 900px) and (min-width: 701px) {
   .page { padding: 0 36px; }
-  .cv { grid-template-columns: 225px minmax(0, 1fr); column-gap: 32px; }
+  .cv { --sidebar-width: 225px; column-gap: 32px; }
+  .portrait-frame { padding-right: 24px; }
   .sidebar { padding-right: 24px; }
   .contact-list { gap: 12px; }
   .contact-list li { gap: 7px; }
@@ -116,7 +123,10 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .page { padding: 0 24px; }
   .toolbar { padding: 24px 0 40px; }
   .print-button { padding: 8px 10px; font-size: 10px; gap: 7px; }
-  .cv { grid-template-columns: minmax(0, 1fr); grid-template-areas: "identity" "profile" "experience" "publications" "sidebar"; min-height: auto; row-gap: 38px; }
+  .cv { grid-template-columns: minmax(0, 1fr); grid-template-areas: "portrait" "identity" "profile" "experience" "publications" "sidebar"; min-height: auto; row-gap: 38px; }
+  .cv::before { display: none; }
+  .portrait-frame { padding: 0; justify-self: center; }
+  .portrait { width: 160px; max-width: 100%; }
   h1 { font-size: 50px; letter-spacing: -2px; }
   .subtitle { font-size: 12px; margin-top: 16px; }
   h2, .sidebar h2 { font-size: 15px; margin-bottom: 18px; }
@@ -142,7 +152,9 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   :root { font-size: 10pt; }
   .page { max-width: none; padding: 0; }
   .toolbar, .skip-link { display: none; }
-  .cv { grid-template-columns: 49mm minmax(0, 1fr); column-gap: 9mm; row-gap: 8mm; min-height: 205mm; }
+  .cv { --sidebar-width: 49mm; column-gap: 9mm; row-gap: 6mm; min-height: 205mm; }
+  .portrait-frame { padding-right: 6mm; }
+  .portrait { width: 36mm; max-width: 100%; }
   .sidebar { padding: 2mm 6mm 0 0; }
   .sidebar section + section { margin-top: 14mm; }
   .sidebar h2, h2 { font-size: 11pt; margin-bottom: 5mm; }
@@ -154,7 +166,8 @@ h3 { font-size: 15px; line-height: 1.7; font-weight: 700; }
   .contact-list a { font-size: 6.8pt; }
   h1 { font-size: 34pt; letter-spacing: -2px; }
   .subtitle { margin-top: 4mm; font-size: 9pt; }
-  .profile p { font-size: 9pt; }
+  .profile p { font-size: 8.5pt; line-height: 1.65; }
+  .profile p + p { margin-top: 3mm; }
   .publications { padding-bottom: 0; }
   .experience > h2 { margin-bottom: 7mm; }
   .entry { break-inside: avoid; }
